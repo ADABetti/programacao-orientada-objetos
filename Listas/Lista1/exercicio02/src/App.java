@@ -41,11 +41,12 @@ public class App {
     public static void imprimirMatriz (boolean[][] matriz){
         
         for (int linha = 0; linha <matriz[0].length; linha++){
-            System.out.print('|');     
-            for (int coluna = 0; coluna < matriz[1].length; coluna++){     
+            System.out.print('|');
+            for (int coluna = 0; coluna < matriz[1].length; coluna++){      
+                // usar condição para printar o pipeline!              
                     if (matriz[linha][coluna]){
                         System.out.print('O');
-                        System.out.print('|'); // Existe uma forma melhor para fazer isso?
+                        System.out.print('|'); 
                     } else {
                         System.out.print('X');
                         System.out.print('|'); 
