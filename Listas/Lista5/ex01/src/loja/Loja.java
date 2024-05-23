@@ -14,28 +14,46 @@ public class Loja {
     this.segmento = segmento;
   }
 
-  public void setEndereco(String endereco) {
-    this.endereco = endereco;
-  }
-
+  // Getters e Setters
   public String getNome() {
     return nome;
+  }
+
+  public void setNome(String nome) {
+    this.nome = nome;
   }
 
   public String getSegmento() {
     return segmento;
   }
 
+  public void setSegmento(String segmento) {
+    this.segmento = segmento;
+  }
+
   public String getEndereco() {
     return endereco;
+  }
+
+  public void setEndereco(String endereco) {
+    this.endereco = endereco;
   }
 
   public ArrayList<Produto> getProdutos() {
     return this.produtos;
   }
 
+  // Métodos:
+  public void imprimirProdutos() {
+    for (Produto produto : produtos) {
+      System.out.println(produto.getNome());
+      System.out.println(produto.getPreco());
+      System.out.println(produto.getQuantidadeDisponivel());
+    }
+  }
+
   public void adicionarProduto(Produto produto) {
     this.produtos.add(produto);
-    System.out.println(produto.getProdutoNome() + " foi registrado.");
+    System.out.println(produto.getNome() + " foi registrado.");
   }
 }
