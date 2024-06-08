@@ -3,6 +3,7 @@ package escola;
 public class Aluno extends Usuario {
   private String matricula;
 
+  // Constructor:
   public Aluno() {
     super("Mateus", "mateus@gmail.com");
     this.matricula = "12341234";
@@ -28,7 +29,7 @@ public class Aluno extends Usuario {
               """, super.getNome(), super.getEmail(), this.matricula));
   }
 
-  // SObrecarregar o método exibirInfo:
+  // Sobrecarregar o método exibirInfo:
   public void exibirInfo(boolean exibirNome, boolean exibirEmail, boolean exibirMatricula) {
     if (exibirNome && exibirEmail && exibirMatricula) {
       super.exibirInfo();
