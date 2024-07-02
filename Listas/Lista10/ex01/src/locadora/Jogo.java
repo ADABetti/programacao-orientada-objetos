@@ -4,6 +4,11 @@ public class Jogo implements Audiovisual {
   private String titulo;
   private String plataforma;
 
+  @Override
+  public String toString() {
+    return this.getTitulo();
+  }
+
   // COnstructor:
   public Jogo(String titulo, String plataforma) {
     this.titulo = titulo;
@@ -30,10 +35,9 @@ public class Jogo implements Audiovisual {
   // Sobrescrever método da interface:
   @Override
   public void exibirInfo() {
-    System.out.println(
-        String.format(
-            """
-                O jogo %s, funciona na plataforma %s.
-                """, this.titulo, this.plataforma));
+    System.out.println(String.format(
+        """
+            O jogo %s, funciona na plataforma %s.
+            """, this.titulo, this.plataforma));
   }
 }

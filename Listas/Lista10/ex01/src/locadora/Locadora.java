@@ -16,15 +16,21 @@ public class Locadora<T extends Audiovisual> {
     }
   }
 
-  // Como fazer?? T buscarItem(String titulo): Busca um item audiovisual pelo
-  // título e retorna o item encontrado. (É necessário realizar cast para
-  // utilizar o método getTitulo() para comparar o titulo recebido
-  // com o do Filme/Jogo
   public T buscarItem(String titulo) {
     for (T item : acervo) {
-      if (item.getTitulo().equalsIgnoreCase(titulo)) {
-        return item;
+      if (item instanceof Jogo) {
+        Jogo jogo = (Jogo) item;
+        if (jogo.getTitulo().equals(titulo)) {
+          return item;
+        }
+      }
+      if (item instanceof Filme) {
+        Filme filme = (Filme) item;
+        if (filme.getTitulo().equals(titulo)) {
+          return item;
+        }
       }
     }
+    return null;
   }
 }

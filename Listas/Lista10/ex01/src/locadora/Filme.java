@@ -7,6 +7,11 @@ public class Filme implements Audiovisual {
   private String diretor;
   private List<String> atores;
 
+  @Override
+  public String toString() {
+    return this.getTitulo();
+  }
+
   // Constructor:
   public Filme(String titulo, String diretor, List<String> atores) {
     this.titulo = titulo;
